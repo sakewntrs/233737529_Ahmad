@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form by Nadir Ahmad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="title">Survey Form by Nadir Ahmad</h1>
+  <p id="description">We value your feedback! Please fill out the survey below.</p>
+
+  <form id="survey-form">
+    <label id="name-label">Name:
+      <input id="name" type="text" required placeholder="Your name" />
+    </label>
+
+    <label id="email-label">Email:
+      <input id="email" type="email" required placeholder="Your email" />
+    </label>
+
+    <label id="number-label">Hours spent on Social Media (0-10):
+      <input id="number" type="number" min="0" max="10" placeholder="Hours" />
+    </label>
+
+    <label for="dropdown">How are you feeling today?</label>
+    <select id="dropdown">
+      <option value="" disabled selected>Select an option</option>
+      <option value="fine">Fine</option>
+      <option value="great">Great</option>
+      <option value="okay">Okay</option>
+      <option value="not_good">Not good</option>
+    </select>
+
+    <fieldset>
+      <legend>Do you prefer to use:</legend>
+      <label>
+        <input type="radio" name="platform" value="desktop" required />
+        Desktop
+      </label>
+      <label>
+        <input type="radio" name="platform" value="mobile" required />
+        Mobile
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What platforms do you use? (Select all that apply)</legend>
+      <label>
+        <input type="checkbox" value="facebook" />
+        Facebook
+      </label>
+      <label>
+        <input type="checkbox" value="twitter" />
+        Twitter
+      </label>
+      <label>
+        <input type="checkbox" value="instagram" />
+        Instagram
+      </label>
+      <label>
+        <input type="checkbox" value="tiktok" />
+        TikTok
+      </label>
+    </fieldset>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" placeholder="Your comments here..." rows="4"></textarea>
+
+    <input type="submit" id="submit" value="Submit" />
+  </form>
+
+</body>
+</html>
