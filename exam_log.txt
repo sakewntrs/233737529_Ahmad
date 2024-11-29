@@ -1,0 +1,38 @@
+    1  mkdir linux_practice
+    2  cd linux_practice
+    3  touch notes.txt
+    4  ls >> notes.txt
+    5  cat notes.txt
+    6  echo "Hello, Linux!" > notes.txt
+    7  echo "This is a practical exam." >> notes.txt
+    8  head -n 1 notes.txt
+    9  tail -n 1 notes.txt
+   10  mkdir subdir
+   11  mv notes.txt subdir/
+   12  mv subdir practice_subdir
+   13  cp practice_subdir/notes.txt .
+   14  date
+   15  uptimr
+   16  uptime
+   17  ldu -sh ~
+   18  git checkout -b finalexam
+   19  history > exam_log.txt
+   20  git add exam_log.txt
+   21  git commit -m "Added exam_log.txt with command history"
+   22  git config --global user.email "ismaelahmadggm8@gmail.com" 
+   23  git config --global user.name "sakewntrs"
+   24  git add exam_log.txt
+   25  git commit -m "Added exam_log.txt with command history"
+   26  git push
+   27  git pudh se
+   28  git push --set-upstream origin finalexam
+   29  git push
+   30  git push --set-upstream origin finalexam
+   31  git push
+   32  git push --set-uptream origin finalexam
+   33  git push --set-upstream origin finalexa
+   34  git push --set-upstream origin finalexam
+   35  cd 233737529_Ahmad
+   36  git check finalexam
+   37  git checkout finalexam
+   38  history > exam_log.txt
