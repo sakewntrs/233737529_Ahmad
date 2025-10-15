@@ -9,11 +9,20 @@
 <body>
   <div class="activity-container">
     <h2>Temperature Converter</h2>
+
+    <form method="POST" action="">
+      Celsius: <input type="number" name="celsius" required><br><br>
+      <input type="submit" value="Convert">
+    </form>
+
     <?php
-      $celsius = 25;
-      $fahrenheit = ($celsius * 9/5) + 32;
-      echo "{$celsius}°C = {$fahrenheit}°F";
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $celsius = $_POST["celsius"];
+        $fahrenheit = ($celsius * 9/5) + 32;
+        echo "{$celsius}°C = {$fahrenheit}°F";
+      }
     ?>
+
     <a href="index.html" class="back-btn">⬅ Back to Home</a>
   </div>
 </body>

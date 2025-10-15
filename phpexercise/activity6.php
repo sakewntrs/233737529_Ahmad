@@ -9,13 +9,24 @@
 <body>
   <div class="activity-container">
     <h2>Salary Calculator</h2>
+
+    <form method="POST" action="">
+      Basic Salary: <input type="number" name="basic" required><br><br>
+      Allowance: <input type="number" name="allowance" required><br><br>
+      Deduction: <input type="number" name="deduction" required><br><br>
+      <input type="submit" value="Calculate">
+    </form>
+
     <?php
-      $basic = 25000;
-      $allowance = 5000;
-      $deduction = 3000;
-      $net = $basic + $allowance - $deduction;
-      echo "Net Salary: ₱$net";
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $basic = $_POST["basic"];
+        $allowance = $_POST["allowance"];
+        $deduction = $_POST["deduction"];
+        $net = $basic + $allowance - $deduction;
+        echo "Net Salary: ₱$net";
+      }
     ?>
+
     <a href="index.html" class="back-btn">⬅ Back to Home</a>
   </div>
 </body>

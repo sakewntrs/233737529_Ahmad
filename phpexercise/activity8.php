@@ -9,13 +9,22 @@
 <body>
   <div class="activity-container">
     <h2>String Manipulation</h2>
+
+    <form method="POST" action="">
+      Enter a Sentence: <input type="text" name="sentence" required><br><br>
+      <input type="submit" value="Analyze">
+    </form>
+
     <?php
-      $sentence = "Ahmad Brothers Cafe Is Authentic!";
-      echo "Number of characters: " . strlen($sentence) . "<br>";
-      echo "Number of words: " . str_word_count($sentence) . "<br>";
-      echo "Uppercase: " . strtoupper($sentence) . "<br>";
-      echo "Lowercase: " . strtolower($sentence);
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $sentence = $_POST["sentence"];
+        echo "Number of characters: " . strlen($sentence) . "<br>";
+        echo "Number of words: " . str_word_count($sentence) . "<br>";
+        echo "Uppercase: " . strtoupper($sentence) . "<br>";
+        echo "Lowercase: " . strtolower($sentence);
+      }
     ?>
+
     <a href="index.html" class="back-btn">⬅ Back to Home</a>
   </div>
 </body>

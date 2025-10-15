@@ -9,14 +9,29 @@
 <body>
   <div class="activity-container">
     <h2>Area and Perimeter of a Rectangle</h2>
+
+    <form method="POST" action="">
+      <label>Enter Length:</label><br>
+      <input type="number" name="length" required><br><br>
+
+      <label>Enter Width:</label><br>
+      <input type="number" name="width" required><br><br>
+
+      <input type="submit" value="Compute">
+    </form>
+
     <?php
-      $length = 10;
-      $width = 5;
-      $area = $length * $width;
-      $perimeter = 2 * ($length + $width);
-      echo "Length: $length<br>Width: $width<br>";
-      echo "Area: $area<br>Perimeter: $perimeter";
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $length = $_POST["length"];
+        $width = $_POST["width"];
+        $area = $length * $width;
+        $perimeter = 2 * ($length + $width);
+
+        echo "<p>Length: $length<br>Width: $width<br>";
+        echo "Area: $area<br>Perimeter: $perimeter</p>";
+      }
     ?>
+
     <a href="index.html" class="back-btn">⬅ Back to Home</a>
   </div>
 </body>

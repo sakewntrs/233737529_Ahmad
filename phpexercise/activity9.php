@@ -9,13 +9,24 @@
 <body>
   <div class="activity-container">
     <h2>Bank Account Simulation</h2>
+
+    <form method="POST" action="">
+      Current Balance: <input type="number" name="balance" required><br><br>
+      Deposit Amount: <input type="number" name="deposit" required><br><br>
+      Withdraw Amount: <input type="number" name="withdraw" required><br><br>
+      <input type="submit" value="Compute">
+    </form>
+
     <?php
-      $balance = 1000;
-      $deposit = 500;
-      $withdraw = 200;
-      $balance = $balance + $deposit - $withdraw;
-      echo "Final Balance: ₱$balance";
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $balance = $_POST["balance"];
+        $deposit = $_POST["deposit"];
+        $withdraw = $_POST["withdraw"];
+        $balance = $balance + $deposit - $withdraw;
+        echo "Final Balance: ₱$balance";
+      }
     ?>
+
     <a href="index.html" class="back-btn">⬅ Back to Home</a>
   </div>
 </body>
